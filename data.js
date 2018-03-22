@@ -65,10 +65,10 @@ var create = function(){
     var container = d3.select("svg");		  
     var dots = container.selectAll("circle").data(combine).enter();
     dots.append("circle")
-	.attr("cx", function(d){return (d[0] / 10);})
-	.attr("cy", function(d){return d[1];})
+	.attr("cx", function(d){return ( 1000 * (d[0] / 116799 )) ;})
+	.attr("cy", function(d){return ( 1000 * (d[1] / 2525));})
 	.attr("r", 3);
-
+    
 }
 
 create();
